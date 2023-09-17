@@ -1,0 +1,21 @@
+[book]
+title = "Allay"
+description = "Learn Allay"
+authors = ["Jonas da Silva"]
+language = "en"
+multilingual = false
+src = "src"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.1" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[output.html]
+additional-css = ["./theme/mdbook-admonish.css"]
+curly-quotes = true
+default-theme = "coal"
+preferred-dark-theme = "coal"
