@@ -18,7 +18,7 @@ parser = ArgumentParser()
 parser.add_argument("name")
 parser.add_argument("age", type=int)
 args = parser.parse_args()
-print(f"You are {args.name} and you are {arg.age} years old.")
+print(f"You are {args.name} and you are {args.age} years old.")
 ```
 
 One can then provide arguments in their configuration file like this:
