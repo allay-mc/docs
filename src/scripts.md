@@ -88,7 +88,7 @@ variables.
 
 ```toml
 [scripts]
-base-path= "scripts/"
+base-path = "scripts/"
 pre = [
     {
         run = "templating.rb",
