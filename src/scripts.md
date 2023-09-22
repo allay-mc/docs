@@ -1,5 +1,7 @@
 # Scripts
 
+<!-- toc -->
+
 Each script is a program run either before building the add-on(s)
 (pre-built state) or after that (post-build state). Scripts can for instance be
 used to convert between file types such as [JSON5](https://json5.org/) to
@@ -122,7 +124,7 @@ system or upload the add-on.
 
 There are often cases where one want to execute simple commands such as
 [`tsc`](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to
-transpile TypeScript.
+transpile TypeScript along with dynamic arguments such as environment variables.
 
 ```toml
 [scripts]
@@ -170,9 +172,9 @@ pre = [
 ]
 ```
 
-## Options
+### Options
 
-### `arch`
+#### `arch`
 
 Possible values:
 
@@ -185,7 +187,7 @@ Possible values:
 - `'aarch64'`
 
 
-### `os`
+#### `os`
 
 Possible values:
 
@@ -199,7 +201,7 @@ Possible values:
 - `'openbsd'`
 - `'netbsd'`
 
-### `family`
+#### `family`
 
 Possible values:
 
@@ -207,7 +209,7 @@ Possible values:
 - `'windows'`
 - `'wasm'`
 
-### `allay_version`
+#### `allay_version`
 
 Possible values:
 
@@ -215,7 +217,7 @@ Possible values:
 - `0.1.0`
 - ...
 
-## Operators and Grouping
+### Operators and Grouping
 
 In addition, conditions can be grouped with parenthesis meaning they are evaluated
 first or chained and modified with the following operators::
@@ -224,4 +226,23 @@ first or chained and modified with the following operators::
 - _condition_ `|` _condition_ --- evaluates `true` when at least one of the condition is met
 - _condition_ `^` _condition_ --- evaluates `true` when exactly one of the condition is met
 - `!` _condition_ --- evaluates `true` when the condition is not met (example: `!os = 'linux'`)
+
+
+## Running executables
+
+```toml
+[scripts]
+# ...
+pre = [
+    {
+        run = "name-of-executable",
+        args = ["arg1", "arg2"]
+    }
+]
+```
+
+This will invoke the `name-of-executable` executable. Note that the executable is not
+required to be in the `base-path` directory. If you want to supply dynamic values such
+as environment variables use a shell script (with [conditions](#conditional-scripts)) or
+some other scripting language as a wrapper instead.
 
