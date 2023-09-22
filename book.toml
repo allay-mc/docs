@@ -19,3 +19,5 @@ additional-css = ["./theme/mdbook-admonish.css"]
 curly-quotes = true
 default-theme = "coal"
 preferred-dark-theme = "coal"
+git-repository-url = "https://github.com/rust-lang/mdBook/tree/master/guide"
+edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
