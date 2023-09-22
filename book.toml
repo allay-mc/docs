@@ -19,5 +19,5 @@ additional-css = ["./theme/mdbook-admonish.css"]
 curly-quotes = true
 default-theme = "coal"
 preferred-dark-theme = "coal"
-git-repository-url = "https://github.com/allay-mc/docs/tree/master/guide"
-edit-url-template = "https://github.com/allay-mc/docs/edit/master/guide/{path}"
+git-repository-url = "https://github.com/allay-mc/docs/tree/master/"
+edit-url-template = "https://github.com/allay-mc/docs/edit/master/src/{path}"
