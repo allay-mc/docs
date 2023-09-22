@@ -7,7 +7,11 @@
 
 - [Installation](./installation.md)
 - [Example Project](./example-project/README.md)
-- [Scripts](./scripts.md)
+- [Scripts](./scripts/README.md)
+  - [Additional Options](./scripts/options.md)
+  - [Conditional Scripts](./scripts/conditional.md)
+  - [Running Executables](./scripts/executables.md)
+  - [Third Party Scripts]()
 - [Reference](./reference/README.md)
   - [Configuration](./reference/configuration.md)
   - [Commands](./reference/cli/README.md)
