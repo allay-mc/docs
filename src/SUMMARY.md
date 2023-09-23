@@ -12,6 +12,7 @@
   - [Conditional Scripts](./scripts/conditional.md)
   - [Running Executables](./scripts/executables.md)
   - [Third Party Scripts]()
+- [Localization]()
 - [Reference](./reference/README.md)
   - [Configuration](./reference/configuration.md)
   - [Commands](./reference/cli/README.md)
