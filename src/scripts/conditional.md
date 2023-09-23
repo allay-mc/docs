@@ -98,10 +98,18 @@ Possible values:
 ## Operators and Grouping
 
 In addition, conditions can be grouped with parenthesis meaning they are evaluated
-first or chained and modified with the following operators::
+first or chained and modified with the following operators:
 
 - _condition_ `&` _condition_ --- evaluates `true` when both conditions are met
 - _condition_ `|` _condition_ --- evaluates `true` when at least one of the condition is met
 - _condition_ `^` _condition_ --- evaluates `true` when exactly one of the condition is met
 - `!` _condition_ --- evaluates `true` when the condition is not met (example: `!os = 'linux'`)
+
+Conditions can be wrapped in parentheses to group them:
+
+```
+(condition1 & condition2) | condition3
+```
+
+This would require both condition1 and condition2 to evaluate true or just condition3.
 
