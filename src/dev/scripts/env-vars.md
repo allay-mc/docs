@@ -64,5 +64,5 @@ path = Path(os.environ["ALLAY_BP_PATH"])
 ```
 ~~~
 
-[^1]: Usually the variables `ALLAY_*_PATH` variables should be used instead
+[^1]: Usually the `ALLAY_*_PATH` variables should be used instead
       of this.
