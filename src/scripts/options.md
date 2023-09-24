@@ -17,9 +17,11 @@ pre = [
 ]
 ```
 
-Note that arguments are not pre-processed like shells do meaning you cannot use
-[glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) or environment
-variables.
+All arguments must be of type string even if the script expects a different type.
+In reality the string is converted by the script just like it would be provided in
+the command-line. Note that arguments are not pre-processed like shells do meaning
+you cannot use [glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) or
+environment variables.
 
 ```toml
 [scripts]
