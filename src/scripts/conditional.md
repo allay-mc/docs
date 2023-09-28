@@ -22,7 +22,7 @@ tsc $ALLAY_PREBUILD/*.ts  # transpile to JavaScript
 rm **/*.ts                # remove TypeScript files (from prebuild)
 ```
 
-However this cannot be used from other operating systems than Linux such as Windows
+However this cannot be used from operating systems other than Linux such as Windows
 as they do not have the `sh` shell. In order to make it compatible with Windows,
 the same script needs to be written in a supported language such as PowerShell:
 
