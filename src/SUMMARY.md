@@ -20,7 +20,10 @@
     - [build]()
     - [watch]()
     - [repair]()
+    - [add]()
+    - [config]()
     - [uuid]()
+    - [doc]()
 - [Publishing your Project]()
 - [Changelog](./changelog.md)
 
