@@ -8,7 +8,9 @@ block into the game requires both a behavior pack for the behavior of the block
 and a resource pack for the textures. If two or more packs are not coherent they
 should not belong to the same Allay project.
 
-Allay is a command-line tool which means you control it from a terminal. We
+{{#webinclude https://raw.githubusercontent.com/allay-mc/.github/main/profile/README.md description}}
+
+Allay is a command-line tool which is controlled from a terminal. We
 expect that you know how to navigate between files in a terminal and how to
 edit files.
 
@@ -23,6 +25,12 @@ to run simple commands like `allay build`.
 This project is in a work-in-progress status. Many features as well as links might
 not work yet. Consider waiting for a stable release if you want to use this program.
 ```
+
+
+## Philosophy
+
+{{#webinclude https://raw.githubusercontent.com/allay-mc/.github/main/profile/README.md philosophy}}
+
 
 ## Glossary
 
