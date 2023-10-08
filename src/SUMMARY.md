@@ -25,7 +25,6 @@
     - [uuid]()
     - [doc]()
 - [Publishing your Project]()
-- [Changelog](./changelog.md)
 
 
 # Developers
