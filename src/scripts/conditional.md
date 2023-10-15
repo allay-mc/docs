@@ -4,7 +4,7 @@ There are often cases where one want to execute simple commands such as
 [`tsc`](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to
 transpile TypeScript along with dynamic arguments such as environment variables.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 base-path = "scripts/"
 pre = [
@@ -33,7 +33,7 @@ Get-ChildItem * -Include *.ts -Recurse | Remove-Item  # remove TypeScript files 
 
 The configuration would then look like this:
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 base-path = "scripts/"
 pre = [
@@ -107,7 +107,7 @@ first or chained and modified with the following operators:
 
 Conditions can be wrapped in parentheses to group them:
 
-```
+```text
 (condition1 & condition2) | condition3
 ```
 

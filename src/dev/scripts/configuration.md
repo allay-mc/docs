@@ -10,8 +10,7 @@ Most programming languages a capable of reading arguments provided in the
 command-line. Rust uses these method to allow users to provide options
 specific to a script in the configuration file.
 
-```python
-# FILE: helloworld.py
+```python,filepath=scripts/helloworld.py
 from argparse import ArgumentParser
 
 parser = ArgumentParser()
@@ -25,7 +24,7 @@ One can then provide arguments in their configuration file like this:
 
 ```toml
 [scripts]
-# ...
+base-path = "scripts"
 pre = [
   { run = "helloworld.py", with = "python", args = ["John Doe", "42"] }
 ]
@@ -51,9 +50,7 @@ Another less recommended approach is the usage of the
 file. It is designed to be used by external programs but parsing TOML is less
 supported than parsing command-line arguments in many programming languages.
 
-```python
-# FILE: helloworld.py
-
+```python,filepath=scripts/helloworld.py
 import os
 from pathlib import Path
 import tomllib

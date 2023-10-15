@@ -1,4 +1,8 @@
+#!/usr/bin/env sh
+
 cargo install --force --version 0.4.35 mdbook
-cargo install --force --version 1.12.1 mdbook-admonish
+cargo install --force --version 1.13.0 mdbook-admonish
 cargo install --force --version 0.14.1 mdbook-toc
 cargo install --force --version 0.1.0 mdbook-webinclude
+echo $(curl -sS https://raw.githubusercontent.com/phoenixr-codes/mdbook-code-block-plus/master/codeblockplus.css) > theme/codeblockplus.css
+echo $(curl -sS https://raw.githubusercontent.com/phoenixr-codes/mdbook-code-block-plus/master/codeblockplus.min.js) > scripts/codeblockplus.js

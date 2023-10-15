@@ -55,14 +55,14 @@ control and generation.
 allay add templating
 ```
 
-```erb
+```erb,lang=mcfunction
 <%# using erb %>
 <% 10.times do |i| %>
 scoreboard objectives add position<%= i %>
 <% end %>
 ```
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 base-path = "scripts"
 pre = [

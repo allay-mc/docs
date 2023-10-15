@@ -3,7 +3,7 @@
 Some scripts might accept additional options which can be set with the `args`
 field.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 base-path = "scripts/"
 pre = [
@@ -23,7 +23,7 @@ the command-line. Note that arguments are not pre-processed like shells do meani
 you cannot use [glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) or
 environment variables.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 base-path = "scripts/"
 pre = [

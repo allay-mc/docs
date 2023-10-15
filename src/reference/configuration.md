@@ -28,7 +28,7 @@ scripts as well.
 The name of the project which will be used for the individual add-ons as well
 unless overridden with `pack.*.name` where `*` is one of `bp`, `rp`, `sp` or `wt`.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [project.name]
 de-de = "Hallo Welt"
 en-us = "Hello World"
@@ -40,7 +40,7 @@ The description of the project which will be used for the individual add-ons as
 well unless overridden with `pack.*.description` where `*` is one of `bp`, `rp`,
 `sp` or `wt`.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [project.description]
 de-de = "Das ist mein tolles Projekt."
 en-us = "This is my amazing project."
@@ -53,7 +53,7 @@ en-us = "This is my amazing project."
 The version of the project of the form `n.n.n` where `n` is any natural number or
 zero.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [project]
 # ...
 version = "0.1.0"
@@ -66,7 +66,7 @@ Specifies whether the project is currently in development. This has impact on th
 build process and maybe some scripts. This behavior can be overridden with
 `allay build --release`.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [project]
 # ...
 development = true
@@ -88,7 +88,7 @@ An array of people that are considered the "authors" of the project. An optional
 email address may be included within angled brackets at the end of each author
 entry.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [project]
 # ...
 authors = ["John Doe", "Joana Doe <joana.doe@example.org>"]
@@ -100,7 +100,7 @@ authors = ["John Doe", "Joana Doe <joana.doe@example.org>"]
 The name of the license(s). You might want to include a `LICENSE.txt` file in the
 root of your project which contains the content of the license.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [project]
 # ...
 license = "MIT OR Apache-2.0"
@@ -111,7 +111,7 @@ license = "MIT OR Apache-2.0"
 
 The URL to a site that is the home page for your project.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [project]
 # ...
 url = "https://github.com/allay-mc/example"

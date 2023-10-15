@@ -18,14 +18,6 @@ You can install them all at once by running the appropiate installer script in
 the `install` with your shell:
 
 ```console
-sh ./install
-```
-
-```powershell
-powershell .\install
-```
-
-```console
-nu ./install
+./install
 ```
 

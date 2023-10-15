@@ -1,2 +1,3 @@
 theme/* linguist-vendored
+scripts/* linguist-vendored
 *.md linguist-detectable

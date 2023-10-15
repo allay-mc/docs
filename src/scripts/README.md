@@ -7,7 +7,7 @@ used to convert between file types such as [JSON5](https://json5.org/) to
 
 Scripts are executed in order how they are specified in the configuration file.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 base-path = "scripts/"
 pre = [
@@ -41,7 +41,7 @@ project
 
 Then you can refer to the scripts like this in your configuration file.
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 base-path = "scripts"
 pre = [

@@ -8,7 +8,7 @@ src = "src"
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
-assets_version = "2.0.1" # do not edit: managed by `mdbook-admonish install`
+assets_version = "3.0.0" # do not edit: managed by `mdbook-admonish install`
 
 [preprocessor.toc]
 command = "mdbook-toc"
@@ -17,7 +17,8 @@ renderer = ["html"]
 [preprocessor.webinclude]
 
 [output.html]
-additional-css = ["./theme/mdbook-admonish.css"]
+additional-css = ["./theme/mdbook-admonish.css", "./theme/mdbook-admonish.css", "./theme/codeblockplus.css"]
+additional-js = ["./scripts/codeblockplus.js"]
 curly-quotes = true
 default-theme = "coal"
 preferred-dark-theme = "coal"

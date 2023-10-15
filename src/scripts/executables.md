@@ -1,6 +1,6 @@
 # Running Executables
 
-```toml
+```toml,icon=gear,filepath=allay.toml
 [scripts]
 # ...
 pre = [
