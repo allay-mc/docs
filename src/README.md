@@ -1,8 +1,5 @@
 # Overview
 
-Some features of Allay are inspired by the wonderful
-[Regolith project](https://bedrock-oss.github.io/regolith/).
-
 Each Allay project resembles one or more coherent packs. For example adding a new
 block into the game requires both a behavior pack for the behavior of the block
 and a resource pack for the textures. If two or more packs are not coherent they

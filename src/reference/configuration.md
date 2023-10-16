@@ -13,13 +13,17 @@ scripts as well.
   - [`authors`](#the-authors-field)
   - [`license`](#the-license-field)
   - [`url`](#the-url-field)
-- [`localization`](#the-localization-section)
+- [`[localization]`](#the-localization-section)
   - [`primary-language`](#the-primary-language-field)
   - [`localization-groups`](#the-localization-groups-field)
-- [`scripts`](#the-scripts-section)
+- [`[scripts]`](#the-scripts-section)
   - [`base-path`](#the-base-path-field)
   - [`pre`](#the-pre-field)
   - [`post`](#the-post-field)
+- [`[build]`](#the-build-section)
+  - [`include`](#the-include-and-exclude-field)
+  - [`exclude`](#the-include-and-exclude-field)
+  - [`use-custom-manifest`](#the-use-custom-manifest-field)
 
 --------------------------------------------------------------------------------
 
@@ -122,12 +126,98 @@ url = "https://github.com/allay-mc/example"
 
 ### The `primary-language` field
 
+The primary language the add-on use. This is the language that untranslated
+languages will ultimatively fall back to.
+
+```toml,icon=gear,filepath=allay.toml
+[localization]
+primary-language = "en-us"
+```
+
 ### The `localization-groups` field
+
+Using this field allows you to override existing language groups or create new
+ones. This is explained in detail in [chapter 4](../localitaion.md)
+
+```toml,icon=gear,filepath=allay.toml
+[localization]
+localization-groups = [
+  ["ru-ru", "uk-ua"], 
+  # puts russian and ukrainian in the same group meaning if a translation for
+  # russian exists, ukrainian will fall back to that and vice versa
+
+  ["de-de", "de-at"]
+  # puts german german and austrian german, which is not supported natively but
+  # could be implemented with a resource pack, in one group
+]
+```
 
 ## The `[scripts]` section
 
 ### The `base-path` field
 
+This is the path relative to the project's root directory (the directory that
+contains the `allay.toml` file) where scripts should be searched for. This is
+the `scripts` directory by convention but you are free to choose whatever
+directory you want.
+
 ### The `pre` field
 
+An array of scripts run before building the add-on. This is explained in detail
+in [chapter 3](../scripts/index.md)
+
 ### The `post` field
+
+An array of scripts run afte the add-ons have been built. This is explained in
+detail in [chapter 3](../scripts/index.md)
+
+
+## The `[build]` section
+
+### The `include` and `exclude` field
+
+These fields allow you to specify glob patterns which
+
+```toml,icon=gear,filepath=allay.toml
+include = [
+  "**/*.json",
+  "**/*.md",
+  "**/*.js",
+  "**/*.png",
+  "**/*.mcfunction",
+  "**/*.mcstructure",
+  "**/*.lang",
+]
+```
+
+The configuration above makes Allay remove all files except the ones that have
+one of the above mentioned file extensions. Using this field is generally
+discouraged because an add-on uses several different files with different names
+and extensions. Minecraft will not complain if the add-on contains unrecognized
+files. It should be the job of scripts which convert files that are not used in
+the final build to remove those files.
+
+Using the `exclude` file on the other hand is acceptable if a script for example
+does not remove unused files or if you just want to include notices in the source
+but remove them in the build.
+
+```toml,icon=gear,filepath=allay.toml
+exclude = ["**/LICENSE.txt", "**/README.md"]
+```
+
+The above example keeps all files except those named `LICENSE.txt` and `README.md`.
+
+```admonish warning
+You cannot set both `include` and `exclude` at the same time.
+```
+
+```admonish important
+The `manifest.json` file is the only file that is kept no matter what patterns are
+specified in `include` and `exclude`.
+```
+
+### The `use-custom-manifest` field
+
+Because the `allay.toml` removes the need of a `manifest.json` file, Allay will
+display a warning if it found such file and ignores it. If you, for some reason
+need to use a custom `manifest.json`, then set this option to `true`.
