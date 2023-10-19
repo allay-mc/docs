@@ -176,7 +176,8 @@ detail in [chapter 3](../scripts/index.md)
 
 ### The `include` and `exclude` field
 
-These fields allow you to specify glob patterns which
+These fields allow you to specify glob patterns which affect the presence of
+specific files in the built add-on.
 
 ```toml,icon=gear,filepath=allay.toml
 include = [
