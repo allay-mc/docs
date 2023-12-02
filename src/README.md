@@ -55,7 +55,7 @@ allay add templating
 ```erb,lang=mcfunction
 <%# using erb %>
 <% 10.times do |i| %>
-scoreboard objectives add position<%= i %>
+scoreboard objectives add position<%= i %> dummy
 <% end %>
 ```
 
