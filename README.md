@@ -1,5 +1,10 @@
 # Documentation for Allay
 
+> [!WARNING]
+> This repository and the documentation at <https://allay-mc.github.io/docs/> is no longer up-to-date. Use
+> [the manual](https://allay-mc.github.io/allay/) which refers to the latest release after
+> [version 0.1.0-beta.1](https://github.com/allay-mc/allay/releases/tag/v0.1.0-beta.1).
+
 - 📖 [Read the Documentation](https://allay-mc.github.io/docs/)
 - 📦 [Crate](https://crates.io/crates/allay)
 
